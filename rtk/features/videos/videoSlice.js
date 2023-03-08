@@ -18,9 +18,12 @@ const fetchVideo = createAsyncThunk("video/fetchVideo", async (_, { dispatch }) 
     );
     const video = await response.json();
 
-    dispatch(fetchVideos(video?.tags));
+    // dispatch(fetchVideos(video?.tags));
+    
     return video;
 });
+
+
 
 
 const videoSlice = createSlice({
