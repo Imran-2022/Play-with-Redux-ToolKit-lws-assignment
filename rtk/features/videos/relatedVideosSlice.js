@@ -11,7 +11,7 @@ const initialState = {
 
 // create async thunk
 
-const fetchVideos = createAsyncThunk("video/fetchVideos", async (tags) => {
+const fetchVideos = createAsyncThunk("relatedVideos/fetchVideos", async (tags) => {
     const urlQuery= tags.map((value) => `tags_like=${value}`).join('&');
     const response = await fetch(`http://localhost:9000/videos?${urlQuery}`);
     const posts = await response.json();
