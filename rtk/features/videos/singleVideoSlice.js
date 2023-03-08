@@ -7,7 +7,7 @@ const singleVideo = async()=>{
         "http://localhost:9000/videos"
     );
     const post = await response.json();
-    console.log(post?.tags);
+    // console.log(post?.tags);
     store.dispatch(fetchVideos(post?.tags));
 }
 module.exports.singleVideo = singleVideo;

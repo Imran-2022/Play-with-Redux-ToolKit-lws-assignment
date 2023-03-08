@@ -1,5 +1,6 @@
 const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 const fetch = require("node-fetch");
+const { sortByView } = require("./helpers/sortByView");
 
 // initial state
 const initialState = {
@@ -29,7 +30,7 @@ const relatedVideosSlice = createSlice({
         builder.addCase(fetchVideos.fulfilled, (state, action) => {
             state.loading = false;
             state.error = "";
-            state.videos = action.payload;
+            state.videos = sortByView(action.payload);
         });
 
         builder.addCase(fetchVideos.rejected, (state, action) => {
