@@ -5,7 +5,7 @@ const { sortByView } = require("./helpers/sortByView");
 // initial state
 const initialState = {
     loading: false,
-    videos: [],
+    relatedVideos: [],
     error: "",
 };
 
@@ -19,7 +19,7 @@ const fetchVideos = createAsyncThunk("video/fetchVideos", async (tags) => {
 });
 
 const relatedVideosSlice = createSlice({
-    name: "post",
+    name: "relatedVideos",
     initialState,
     extraReducers: (builder) => {
         builder.addCase(fetchVideos.pending, (state, action) => {
@@ -30,13 +30,13 @@ const relatedVideosSlice = createSlice({
         builder.addCase(fetchVideos.fulfilled, (state, action) => {
             state.loading = false;
             state.error = "";
-            state.videos = sortByView(action.payload);
+            state.relatedVideos = sortByView(action.payload);
         });
 
         builder.addCase(fetchVideos.rejected, (state, action) => {
             state.loading = false;
             state.error = action.error.message;
-            state.videos = [];
+            state.relatedVideos = [];
         });
     },
 });
