@@ -1,6 +1,7 @@
-## এসাইনমেন্ট রিকুয়ারমেন্ট:
+### Play-with-Redux-ToolKit-lws-assignment
 
-#### এসাইনমেন্ট এ আপনাকে যা যা করতে হবেঃ
+
+##
 
 ✓ এই এসাইনমেন্টটি শুধুমাত্র **redux toolkit** দিয়ে করতে হবে। এজন্য যেভাবে এই মডিউলে vanilla node js প্রোজেক্টে **@reduxjs/toolkit** প্যাকেজ install করে প্রোজেক্টটি দেখানো হয়েছে, সেভাবেই আপনারা একটি প্রজেক্ট সেটআপ করে নিবেন। কোনো প্রকার UI based framwork দিয়ে করা যাবে না।
 
@@ -21,7 +22,7 @@ http://localhost:9000/videos?tags_like=javascript&tags_like=react
 ✓ Console এ লগ করার জন্যে অবশ্যই **redux-logger** এই middleware টি ব্যবহার করতে হবে।
 
 ✓ মনে রাখবেন, একবার node application run করে দিলেই দুটি API request sequentially পর পর রান করতে হবে অর্থাৎ প্রথম রিকুয়েস্টে যেই ট্যাগ গুলো পাবো সেই ট্যাগ দিয়ে ‘tags_like’ সার্চ দিয়ে বাকি রিলেটেড ভিডিও গুলো নিয়ে আসতে হবে।
-
+##
 
 ## result : -
 ![image](https://user-images.githubusercontent.com/91984650/229034593-0e821c56-bb30-4420-88ee-234270bf3e3d.png)
